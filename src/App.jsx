@@ -1,22 +1,20 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './App.css'
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import "./App.css";
+import Navigation from "./components/navigation";
+import { Home } from "./components/Home";
+import { Projects } from "./components/Projects";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <h1 style={{ fontWeight: 200 }}>Joshua Rashtian.</h1>
-      <div className="card">
-        <p>
-          Future Programmer, Designer, Creative.
-        </p>
+    <BrowserRouter>
+      <div>
+        <Navigation />
+        <Home />
       </div>
-      <p className="read-the-docs">
-        Stay Tuned!
-      </p>
-    </>
-  )
-}
+      <Projects />
+    </BrowserRouter>
+  );
+};
 
-
-export default App
+export default App;
