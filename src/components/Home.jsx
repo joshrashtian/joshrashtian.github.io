@@ -6,7 +6,7 @@ export const Home = () => {
     <div>
     <h1 className="name" >Joshua Rashtian.</h1>
       <div className="card">
-        <p className="">
+        <p className="cardtext">
           Future Programmer, Designer.
         </p>
       </div>
