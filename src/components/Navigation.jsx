@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { motion } from "framer-motion";
-import logo from "../assets/joshrashtian.png"
+import logo from "../assets/home/joshrashtian.png"
 
 const Navigation = () => {
   const [active, setActive] = useState("");
 
   return (
-    <nav className="bg-cyan-950 align-middle">
-      <motion.div className="w-full h-20 flex flex-row items-center mx-auto rounded-b-lg">
+    <nav className="bg-cyan-950">
+      <motion.div className="w-full h-20 flex flex-row items-center mx-auto rounded-b-lg ">
         <Link
           to="/"
           className="align-middle gap-20"

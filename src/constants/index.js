@@ -1,3 +1,6 @@
+import Taskify from '../assets/projects/taskify.jpeg'
+import Disphotoplay from '../assets/projects/Disphotoplay.png'
+
 const status = ["Finished", "Work In Progress"];
 const types = ["Software", "Video Production"];
 
@@ -26,7 +29,7 @@ const projects = [
     type: "Software",
     status: status[0],
     date: "September 2023",
-    logo: '../assets/taskify.jpeg',
+    logo: Taskify,
     tools: ["React Native", "JavaScript"],
     points: [
       "Used to learn the basics of React Native",
@@ -41,7 +44,7 @@ const projects = [
     type: "Software",
     status: status[0],
     date: "March 2023",
-    logo: '../assets/Disphotoplay.png',
+    logo: Disphotoplay,
     tools: ["JavaScript"],
     points: [
       "Used to learn the basics of JavaScript, and build a simple project.",
