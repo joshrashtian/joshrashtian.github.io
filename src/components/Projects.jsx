@@ -16,7 +16,6 @@ export const Projects = () => {
             <h2>{project.description}</h2>
           </div>
         ))}
-        <h1>End</h1>
     </div>
   )
 }

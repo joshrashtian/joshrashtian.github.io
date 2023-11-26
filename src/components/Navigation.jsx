@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { motion } from "framer-motion";
-
-console.log(navLinks);
+import logo from "../assets/joshrashtian.png"
 
 const Navigation = () => {
   const [active, setActive] = useState("");
@@ -19,7 +18,8 @@ const Navigation = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <h2 className="text-xl font-bold text-white ml-5">Joshua Rashtian</h2>
+          {/*(<h2 className="text-xl font-bold text-white ml-5">Joshua Rashtian</h2>*/}
+          <img src={logo} className="h-30 w-60 ml-3" />
         </Link>
         <ul className="list-none sm:flex flex-row gap-10 ml-10">
           {navLinks.map((link) => (
