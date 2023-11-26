@@ -3,16 +3,14 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { motion } from "framer-motion";
 
-import "./Nav.css";
-
 console.log(navLinks);
 
 const Navigation = () => {
   const [active, setActive] = useState("");
 
   return (
-    <nav className="bg-cyan-500 align-middle">
-      <motion.div className="w-full h-20 flex flex-row items-center mx-auto">
+    <nav className="bg-cyan-950 align-middle">
+      <motion.div className="w-full h-20 flex flex-row items-center mx-auto rounded-b-lg">
         <Link
           to="/"
           className="align-middle gap-20"

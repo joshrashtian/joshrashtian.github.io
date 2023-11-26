@@ -20,6 +20,7 @@ export const navLinks = [
 const projects = [
     //* Status: 0 = Finished, 1 = WIP
   {
+    id: 0,
     title: "Taskify",
     description: "A small, simple, brief task app.",
     type: "Software",
@@ -34,6 +35,7 @@ const projects = [
     source_code: "https://github.com/joshrashtian/Taskify"
   },
   {
+    id: 1,
     title: "Disphotoplay",
     description: "A simple photo album application.",
     type: "Software",
@@ -47,6 +49,11 @@ const projects = [
     ],
     source_code: "https://github.com/joshrashtian/Disphotoplay"
   },
+  {
+    id: 2,
+    title: "Untitled WRTV Project",
+    type: "Video Production",
+  }
 ];
 
 export { projects };
