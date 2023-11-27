@@ -9,7 +9,7 @@ const Navigation = () => {
 
   return (
     <nav className="bg-cyan-950">
-      <motion.div className="w-full h-20 flex flex-row items-center mx-auto rounded-b-lg ">
+      <motion.div className="w-full h-20 flex flex-row items-center justify-between rounded-b-lg ">
         <Link
           to="/"
           className="align-middle gap-20"
@@ -21,7 +21,7 @@ const Navigation = () => {
           {/*(<h2 className="text-xl font-bold text-white ml-5">Joshua Rashtian</h2>*/}
           <img src={logo} className="h-30 w-60 ml-3" />
         </Link>
-        <ul className="list-none sm:flex flex-row gap-10 ml-10">
+        <ul className="list-none sm:flex flex-row gap-10 mx-10 ">
           {navLinks.map((link) => (
             <li
               key={link.id}
