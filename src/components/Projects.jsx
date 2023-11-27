@@ -1,46 +1,60 @@
 import React, { useEffect, useState } from "react";
 import { projects } from "../constants";
-import GitHub from "../assets/projects/github.png"
+import { motion } from "framer-motion";
+import GitHub from "../assets/projects/github.png";
+import Globe from "../assets/projects/globe.png";
 
 export const Projects = () => {
-
-  const Categories = ["All", "Software", "Video Production"]
-  const [selected, setSelected] = useState("")
-  const [filteredList, setFilter] = useState(projects)
+  const Categories = ["All", "Software", "Video Production", "Video Game"];
+  const [selected, setSelected] = useState("");
+  const [filteredList, setFilter] = useState(projects);
 
   useEffect(() => {
     const value = selected;
-    if(value != "All"){
-    const filter = projects.filter(project => project.type.includes(value))
-    setFilter(filter)
+    if (value != "All") {
+      const filter = projects.filter((project) => project.type.includes(value));
+      setFilter(filter);
     } else {
-    setFilter(projects)
+      setFilter(projects);
     }
-    console.log(filteredList)
-  }, [selected])
+  }, [selected]);
 
   return (
     <div>
       <h1 className="font-bold text-[20px] ml-2">Projects</h1>
-      <div className="flex flex-wrap ml-2">
-      {Categories.map((category, index) => (
-          <button className=" w-40 h-10 bg-blue-400 hover:bg-blue-600 m-1 rounded-2xl text-white font-[700] " type="button" key={index} onClick={() => {setSelected(category) + console.log(selected)}}>{category}</button>
+      <div className="flex flex-wrap mx-2">
+        {Categories.map((category, index) => (
+          <button
+            className="w-48 h-10 shadow-md bg-blue-400 hover:bg-blue-600 hover:rounded-xl m-1 rounded-3xl text-white font-[700] transition-all duration-200"
+            type="button"
+            key={index}
+            onClick={() => {
+              setSelected(category) + console.log(selected);
+            }}
+          >
+            {category}
+          </button>
         ))}
       </div>
       <div className="flex flex-wrap justify-evenly">
         {filteredList.map((project) => (
-          <div
+          <motion.div
             key={project.id}
-            className="p-4 bg-white m-1 mx-3 flex rounded-[16px] shadow-lg"
+            className="p-5 bg-white m-1 mx-3 flex rounded-[16px] shadow-lg"
           >
-            <img src={project.logo} className="h-20 w-20 rounded-lg " />
+            <img
+              src={project.logo != undefined ? project.logo : GitHub}
+              className="h-28 w-28 rounded-xl hover:h-32 hover:w-32 transition-all hover:shadow-lg"
+            />
             <div className="ml-3">
               <div className="flex">
-                <h1 className="mr-2">{project.title} - </h1>
+                <h1 className="mr-2 font-medium">{project.title} - </h1>
                 <h1
                   className={`${
                     project.type === "Software"
                       ? "text-cyan-700"
+                      : project.type === "Video Game"
+                      ? "text-red-500"
                       : "text-orange-400"
                   }`}
                 >
@@ -48,11 +62,32 @@ export const Projects = () => {
                 </h1>
               </div>
               <h2>{project.description}</h2>
+
+              <h1 className="mr-2 font-light">
+                {" "}
+                {
+                  (project.status = "Work In Progress"
+                    ? "Date Completed: "
+                    : null)
+                }{" "}
+                {project.date}
+              </h1>
+              <div className="flex flex-row">
+              { project.tools.map((tool) => (
+              <div className="mx-1 cursor-grabbing bg-slate-200 hover:bg-slate-300 p-1 px-2 rounded-lg transition-all">
+                  <h1 className="text-sm font-light ">{tool}</h1>
+              </div>
+              ))
+              }
+              </div>
               {project.source_code != undefined ? (
-                <div className=" w-48 h-9 text-center justify-evenly flex bg-slate-800 rounded-[20px] hover:bg-slate-200 shadow-sm my-2">
-                  <img src={GitHub} className="w-6 h-6 mt-1 rounded-lg" />
+                <div className=" w-[190px] h-9 text-center hover:justify-between flex bg-slate-800 rounded-[20px] hover:rounded-[10px] hover:w-48 hover:bg-slate-600 transition-all duration-400 shadow-sm my-2 group">
+                  <img
+                    src={GitHub}
+                    className="w-6 h-6 mt-1.5 ml-2 rounded-lg group-hover:scale-100 scale-0 transition-all duration-400"
+                  />
                   <a
-                    className="font-bold align-middle text-white mt-1"
+                    className="font-bold align-middle group-hover:mr-3 text-white mt-1"
                     href={
                       project.source_code != undefined
                         ? project.source_code
@@ -65,8 +100,22 @@ export const Projects = () => {
                   </a>
                 </div>
               ) : null}
+              {project.website != undefined ? (
+                <div className=" w-36 h-9 text-center hover:justify-between flex bg-green-700 rounded-[20px] hover:rounded-[10px] hover:w-40 hover:bg-green-800 transition-all duration-400 shadow-sm my-2 group">
+                  <img
+                    src={Globe}
+                    className="w-6 h-6 mt-1.5 ml-2 rounded-lg group-hover:scale-100 scale-0 transition-all duration-400"
+                  />
+                  <a
+                    className="font-bold align-middle group-hover:mr-3 text-white mt-1 transition-all"
+                    href={project.website != undefined ? project.website : null}
+                  >
+                    Visit Website
+                  </a>
+                </div>
+              ) : null}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
