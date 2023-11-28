@@ -3,23 +3,25 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { motion } from "framer-motion";
 import logo from "../assets/home/joshrashtian.png"
+import jjr from "../assets/jjr.png"
 
 const Navigation = () => {
   const [active, setActive] = useState("");
 
   return (
     <nav className="bg-cyan-950">
-      <motion.div className="w-full h-20 flex flex-row items-center justify-between rounded-b-lg ">
+      <motion.div className="w-full h-24 ml-3 flex flex-row items-center justify-between rounded-b-lg ">
         <Link
           to="/"
-          className="align-middle gap-20"
+          className=" h-20 justify-between flex items-center  rounded-3xl hover:shadow-xl hover:bg-cyan-900 transition-all duration-200 "
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);
           }}
         >
           {/*(<h2 className="text-xl font-bold text-white ml-5">Joshua Rashtian</h2>*/}
-          <img src={logo} className="h-30 w-60 ml-3" />
+          <img src={jjr} className="h-12 w-12 ml-3"/>
+          <img src={logo} className=" h-32 w-64 mt-2 ml-3"/>
         </Link>
         <ul className="list-none sm:flex flex-row gap-10 mx-10 ">
           {navLinks.map((link) => (
@@ -30,7 +32,7 @@ const Navigation = () => {
               } hover:text-white cursor-pointer font-medium`}
             onClick={() => {setActive(link.title)}}
             >
-              <h1 href={`#${link.id}`}>{link.title}</h1>
+              <Link to={link.id}>{link.title}</Link>
             </li>
           ))}
         </ul>

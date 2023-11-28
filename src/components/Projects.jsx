@@ -3,6 +3,7 @@ import { projects } from "../constants";
 import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png";
 import Globe from "../assets/projects/globe.png";
+import { Codebases } from "./Codebases";
 
 export const Projects = () => {
   const Categories = ["All", "Software", "Video Production", "Video Game"];
@@ -40,7 +41,7 @@ export const Projects = () => {
         {filteredList.map((project) => (
           <motion.div
             key={project.id}
-            className="p-5 bg-white m-1 mx-3 flex rounded-[16px] shadow-lg"
+            className="p-5 hover:p-7 bg-white m-1 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 "
           >
             <img
               src={project.logo != undefined ? project.logo : GitHub}
@@ -87,7 +88,7 @@ export const Projects = () => {
                     className="w-6 h-6 mt-1.5 ml-2 rounded-lg group-hover:scale-100 scale-0 transition-all duration-400"
                   />
                   <a
-                    className="font-bold align-middle group-hover:mr-3 text-white mt-1"
+                    className="font-bold align-middle group-hover:mr-2 mt-1 text-white"
                     href={
                       project.source_code != undefined
                         ? project.source_code
@@ -107,7 +108,7 @@ export const Projects = () => {
                     className="w-6 h-6 mt-1.5 ml-2 rounded-lg group-hover:scale-100 scale-0 transition-all duration-400"
                   />
                   <a
-                    className="font-bold align-middle group-hover:mr-3 text-white mt-1 transition-all"
+                    className="font-bold align-middle group-hover:mr-3 text-white mt-1 mr-2 transition-all"
                     href={project.website != undefined ? project.website : null}
                   >
                     Visit Website
@@ -117,7 +118,12 @@ export const Projects = () => {
             </div>
           </motion.div>
         ))}
+
       </div>
+      <h1 className="font-bold text-[20px] ml-2">Codebases</h1>
+      <div className="mt-2">
+        <Codebases />
+        </div>
     </div>
   );
 };

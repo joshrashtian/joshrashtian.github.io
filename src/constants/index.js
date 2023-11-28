@@ -49,7 +49,7 @@ const projects = [
     status: status[0],
     date: "September 2023",
     logo: Taskify,
-    tools: ["React Native", "JavaScript"],
+    tools: ["React Native", "JavaScript", "Photoshop"],
     points: [
       "Used to learn the basics of React Native",
       "Used concepts from this on later projects",
@@ -64,7 +64,7 @@ const projects = [
     status: status[0],
     date: "March 2023",
     logo: Disphotoplay,
-    tools: ["JavaScript"],
+    tools: ["JavaScript", "Illustrator"],
     points: [
       "Used to learn the basics of JavaScript, and build a simple project.",
       "AP Computer Science Princples AP Exam",
@@ -74,11 +74,11 @@ const projects = [
   {
     id: 2,
     title: "Untitled WRTV Project",
-    description: "A simple photo album application.",
+    description: ".",
     type: "Video Production",
     status: status[0],
     date: "March 2023",
-    tools: ["JavaScript"],
+    tools: ["Premiere Pro"],
     points: [
       "Used to learn the basics of JavaScript, and build a simple project.",
       "AP Computer Science Princples AP Exam",
@@ -101,7 +101,7 @@ const projects = [
   {
     id: 4,
     title: "Tankzone",
-    description: "First big original game. Two tanks can battle, Controller or Keyboard",
+    description: "Two tanks can battle, Controller or Keyboard",
     type: "Video Game",
     logo: Tankzone,
     status: status[1],
@@ -128,4 +128,20 @@ const projects = [
 },
 ];
 
-export { projects };
+const studybases = [{
+  title: "CMPSCI-111 Database",
+  desc: "Introduction to Java",
+  school: "College of the Canyons",
+  grade: "A",
+  source_code: "https://github.com/joshrashtian/CMPSCI-111_Codebase"
+},
+{
+  title: "CMPSCI-182 Database",
+  desc: "Data Structures",
+  school: "College of the Canyons",
+  grade: "N/A",
+  source_code: "N/A"
+}
+]
+
+export { projects, studybases };
