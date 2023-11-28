@@ -26,8 +26,9 @@ const Navigation = () => {
             <li
               key={link.id}
               className={`${
-                active === link.title ? "text-white font-bold" : "text-gray-200"
+                active === link.title ? "text-white font-bold" : "text-gray-400"
               } hover:text-white cursor-pointer font-medium`}
+            onClick={() => {setActive(link.title)}}
             >
               <h1 href={`#${link.id}`}>{link.title}</h1>
             </li>
