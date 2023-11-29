@@ -22,7 +22,7 @@ export const Projects = () => {
 
   return (
     <div>
-      <h1 className="font-bold text-[20px] ml-2">Projects</h1>
+      <h1 className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Projects</h1>
       <div className="flex flex-wrap mx-2">
         {Categories.map((category, index) => (
           <button

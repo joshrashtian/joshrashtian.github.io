@@ -144,4 +144,22 @@ const studybases = [{
 }
 ]
 
-export { projects, studybases };
+const exprience = [
+{
+  title: "Programmer", 
+  desc: "",
+},
+{
+  title: "Game Developer", 
+  desc: "I worked in game development",
+},
+{
+ title: "Video Creator",
+ desc: "",
+},
+{
+ title: "Graphic Designer",
+ desc: "",
+}]
+
+export { exprience, projects, studybases };
