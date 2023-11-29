@@ -1,6 +1,6 @@
 import React from "react";
-import { studybases } from "../constants";
-import GitHub from "../assets/projects/github.png"
+import { studybases } from "../../constants"
+import GitHub from "../../assets/projects/github.png"
 
 export const Codebases = () => {
   return (

@@ -3,7 +3,7 @@ import { projects } from "../constants";
 import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png";
 import Globe from "../assets/projects/globe.png";
-import { Codebases } from "./Codebases";
+import { Codebases } from "../components/projects/Codebases"
 
 export const Projects = () => {
   const Categories = ["All", "Software", "Video Production", "Video Game"];
