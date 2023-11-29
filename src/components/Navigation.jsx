@@ -13,7 +13,7 @@ const Navigation = () => {
       <motion.div className="w-full h-24 ml-3 flex flex-row items-center justify-between rounded-b-lg ">
         <Link
           to="/"
-          className=" h-20 justify-between flex items-center  rounded-3xl hover:shadow-xl hover:bg-gradient-to-r hover:from-indigo-800 hover:via-purple-700 transition-all duration-200 "
+          className=" h-20 justify-between flex items-center  rounded-3xl hover:shadow-xl hover:bg-gradient-to-r hover:from-indigo-800 hover:via-purple-700 transition-all duration-500 "
           onClick={() => {
             setActive("");
             window.scrollTo(0, 0);

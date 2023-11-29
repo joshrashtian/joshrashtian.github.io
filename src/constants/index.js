@@ -54,7 +54,8 @@ const projects = [
       "Used to learn the basics of React Native",
       "Used concepts from this on later projects",
     ],
-    source_code: "https://github.com/joshrashtian/Taskify"
+    source_code: "https://github.com/joshrashtian/Taskify",
+    featured: "yes",
   },
   {
     id: 1,
@@ -69,7 +70,8 @@ const projects = [
       "Used to learn the basics of JavaScript, and build a simple project.",
       "AP Computer Science Princples AP Exam",
     ],
-    source_code: "https://github.com/joshrashtian/Disphotoplay"
+    source_code: "https://github.com/joshrashtian/Disphotoplay",
+    featured: "yes",
   },
   {
     id: 2,
@@ -83,6 +85,7 @@ const projects = [
       "Used to learn the basics of JavaScript, and build a simple project.",
       "AP Computer Science Princples AP Exam",
     ],
+    featured: "no",
   },
   {
      id: 3,
@@ -96,7 +99,8 @@ const projects = [
      points: [
        "Learned Asyncing", "Learned how to make a platformer"
      ],
-     website: "https://gamegen.games/game/BjEpaGDJ2ksndAhKn"
+     website: "https://gamegen.games/game/BjEpaGDJ2ksndAhKn",
+     featured: "yes",
   },
   {
     id: 4,
@@ -110,7 +114,8 @@ const projects = [
     points: [
       "Learned Asyncing", "Learned how to make a platformer"
     ],
-    website: "https://gamegen.games/game/axrh2STs9q6aG3WdK"
+    website: "https://gamegen.games/game/axrh2STs9q6aG3WdK",
+    featured: "no",
  },
  {
   id: 5,
@@ -124,7 +129,8 @@ const projects = [
   points: [
     "Learned Asyncing", "Learned how to make a platformer"
   ],
-  website: "https://gamegen.games/game/nJamThw3CmYCA5bnh"
+  website: "https://gamegen.games/game/nJamThw3CmYCA5bnh",
+  featured: "no",
 },
 ];
 

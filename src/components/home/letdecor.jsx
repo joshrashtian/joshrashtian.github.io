@@ -24,7 +24,7 @@ export const LetDecor = () => {
         <div className="flex justify-evenly items-center">
         <p className="text-[18px] font-[300] font-mono text-blue-400">[</p>
           {exprience.map((category) => (
-            <p key={selected} onClick={() => {setSelected(category)}} className="text-[18px] hover:text-[20px] mr-1 hover:shadow-sm hover:rounded-lg hover:shadow-emerald-700 hover: font-[300] font-mono text-white cursor-pointer transition-all duration-300">
+            <p key={selected} onMouseOver={() => {setSelected(category)}} className="text-[18px] hover:text-[20px] mr-1 hover:shadow-sm hover:rounded-lg hover:shadow-emerald-700 hover: font-[300] font-mono text-white cursor-pointer transition-all duration-300">
           {category.title}{category.title != "Graphic Designer" ? "," : null}
           </p>
           ))}
