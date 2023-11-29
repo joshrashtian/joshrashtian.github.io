@@ -43,8 +43,8 @@ const Exprience = (category) => {
   console.log(category)
   return (
     <div className="p-5">
-      <p>{category.title}</p>
-      <p>{category.desc}</p>
+      <p className="font-bold text-xl font-mono bg-gradient-to-tr from-purple-600 to-amber-700 bg-clip-text text-transparent ">{category.title}</p>
+      <p className="bg-gradient-to-tr from-purple-900 to-amber-900 bg-clip-text text-transparent">{category.desc}</p>
     </div>
   )
 }

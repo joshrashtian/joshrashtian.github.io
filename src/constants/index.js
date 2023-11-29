@@ -147,11 +147,11 @@ const studybases = [{
 const exprience = [
 {
   title: "Programmer", 
-  desc: "",
+  desc: "I have been interested in programming since I was a kid, when I was a kid I used to play around with Scratch and sometimes Code.Org, however around age 12 I picked up Construct 3 from a Game Development Course. It was a visual scripting based coding tool, and I spent a long time just trying out new ways to make my small little web games better. In 2022, I took the AP Computer Science Principles Course at my High School, and I instantly fell in love all over again. I fine-tuned my AP app and tried to put as much features as I could into it. As of 2023, I have been learning JavaScript, Java, React, Swift, as well as C#. And I have been enjoying my time learning all of these.",
 },
 {
   title: "Game Developer", 
-  desc: "I worked in game development",
+  desc: "I worked in the Game Development Space ",
 },
 {
  title: "Video Creator",
