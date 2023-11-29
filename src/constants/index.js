@@ -157,11 +157,11 @@ const exprience = [
 },
 {
   title: "Game Developer", 
-  desc: "I worked in the Game Development Space ",
+  desc: "I was a part of a course called GameGen, where I learned not only the basics of Computer Science in the Programming Space, but some tips and tricks and the ins and outs when it comes to Game Development. I would test new ideas and new concepts and ways to make my small web games just a little bit more fun. Throughout this course, I learned how to develop and polish my own video games myself, and I loved every second of it. ",
 },
 {
  title: "Video Creator",
- desc: "",
+ desc: "As a kid, I was always interested in the idea of Video Production. It started by making small YouTube videos when I was 10 years old, and mostly just having fun doing so. But, I also grew quite an interest in how to create edited videos. In 2017, I picked up Hitfilm 4 Express, a lesser known video editing software. I would continue to build up my skills in my field, and even picked up Premiere Pro when I was a freshman in High School. I joined my school's TV program as well after taking Video Production. I grew to greatly enjoy making polished videos, and in this time picking up After Effects and sharpening my Premiere Pro skills. I would even go with my TV Team to the Student Television Network Convention in March, a competition. Our school's TV team, which I was a part of the Graphics Team, placed 3rd!",
 },
 {
  title: "Graphic Designer",
