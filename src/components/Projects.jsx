@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Tilt } from 'react-tilt'
 import { projects } from "../constants";
 import { motion } from "framer-motion";
 import GitHub from "../assets/projects/github.png";
@@ -32,12 +33,15 @@ export const Projects = () => {
 
   return (
     <div>
-      <h1 className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Featured Projects</h1>
+      <motion.h1 transition={{duration: 0.3, bounce: 100, type: 'spring'}} initial={{x: -700}} animate={{x: 0}} className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Featured Projects</motion.h1>
       <div className="flex flex-wrap mx-2">
         {featured.map((project) => (
           <motion.div
           key={project.id}
-          className=" w-1/4 bg-slate-100 m-1 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 items-center"
+          transition={{ duration: 0.025, type: "tween", bounce: 30 }}
+          initial={{x: -700}}
+          animate={{x: 0}}
+          className=" p-2 bg-slate-100 m-1 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 items-center"
         >
           <img
             src={project.logo != undefined ? project.logo : GitHub}
@@ -113,6 +117,7 @@ export const Projects = () => {
             ) : null}
           </div>
         </motion.div>
+        
         ))}
       </div>
       <h1 className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Projects</h1>
@@ -130,11 +135,13 @@ export const Projects = () => {
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex flex-wrap justify-evenly mt-10">
         {filteredList.map((project) => (
+          <>
+          <Tilt options={{max: 25, transition: true, perspective: 2000 }}>
           <motion.div
             key={project.id}
-            className="p-5 hover:p-7 bg-white m-1 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 "
+            className="p-5 bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 "
           >
             <img
               src={project.logo != undefined ? project.logo : GitHub}
@@ -210,6 +217,8 @@ export const Projects = () => {
               ) : null}
             </div>
           </motion.div>
+          </Tilt>
+          </>
         ))}
 
       </div>
