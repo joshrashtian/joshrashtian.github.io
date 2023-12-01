@@ -8,12 +8,13 @@ export const Home = () => {
   return (
     <motion.div>
       <div className="flex justify-evenly">
-        <div>
+        <div className="mt-40">
           <motion.h1 initial={{x: -100, opacity: '0%'}} animate={{x: 0, opacity: '100%'}}  transition={{duration: 1}} className=" text-5xl ml-10 mt-36 font-semibold text-slate-500 ">
             Hello, my name is
           </motion.h1>
           <motion.h1
             drag
+            dragTransition={{ timeConstant: 200, min: -50, max: 100, bounceStiffness: 100}}
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.5, duration: 1, stiffness: 50, restDelta: 0.001,  type: 'tween' }}
@@ -31,7 +32,7 @@ export const Home = () => {
         <motion.img
           src={IMG0}
           initial={{scale: 0.5, x: 100, opacity: '0%'}} animate={{scale: 1, x: 0, opacity: '100%'}} transition={{delay: 2, duration: 0.7}}
-          className="h-84 w-72 hover:h- hover:w-80 mt-3 hover:shadow-2xl shadow-lg rounded-3x transition-all duration-500 rounded-3xl"
+          className=" h-2/5 w-1/5 mt-3 hover:shadow-2xl shadow-lg rounded-3x transition-all duration-500 rounded-3xl"
         />
       </div>
       <motion.div initial={{opacity: '0%'}} animate={{opacity: '100%'}} transition={{delay: 4, duration: 1, type: 'just'}} className="text-center justify-center mt-10">

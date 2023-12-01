@@ -33,14 +33,14 @@ export const Projects = () => {
 
   return (
     <div>
-      <motion.h1 transition={{duration: 0.3, bounce: 100, type: 'spring'}} initial={{x: -700}} animate={{x: 0}} className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Featured Projects</motion.h1>
+      <motion.h1 transition={{duration: 0.3}} initial={{x: -90, opacity: '0%'}} animate={{x: 0, opacity: '100%'}} className="font-bold text-6xl m-4 bg-gradient-to-br from-indigo-600 via-pink-900 to-pink-800 bg-clip-text text-transparent transition-all duration-300">Featured Projects</motion.h1>
       <div className="flex flex-wrap mx-2">
-        {featured.map((project) => (
+        {featured.map((project, index) => (
           <motion.div
           key={project.id}
-          transition={{ duration: 0.025, type: "tween", bounce: 30 }}
-          initial={{x: -700}}
-          animate={{x: 0}}
+          transition={{type: "tween", delay: (0.3 * index), duration: 0.25  }}
+          initial={{y: -20, opacity: '0%'}}
+          animate={{y: 0, opacity: '100%'}}
           className=" p-2 bg-slate-100 m-1 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 items-center"
         >
           <img
@@ -135,13 +135,16 @@ export const Projects = () => {
           </button>
         ))}
       </div>
-      <div className="flex flex-wrap justify-evenly mt-10">
-        {filteredList.map((project) => (
+      <div className="flex flex-wrap mt-10">
+        {filteredList.map((project, index) => (
           <>
           <Tilt options={{max: 25, transition: true, perspective: 2000 }}>
           <motion.div
-            key={project.id}
+            key={index}
             className="p-5 bg-white m-2 mx-3 flex rounded-[16px] shadow-lg hover:shadow-2xl transition-all duration-400 "
+            transition={{delay: (0.10 * index), duration: 1, velocity: 5}}
+            initial={{opacity: '0%', scale: 0.5}}
+            animate={{opacity: '100%', scale: 1}}
           >
             <img
               src={project.logo != undefined ? project.logo : GitHub}
